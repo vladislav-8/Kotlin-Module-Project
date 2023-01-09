@@ -2,6 +2,7 @@ import java.util.*
 
 class MainScreen : Screen<Archive>() {
     override val list: MutableList<Archive> = mutableListOf()
+
     private val archives = mutableMapOf<String, Archive>()
     override fun create() {
         println("Введите название архива")

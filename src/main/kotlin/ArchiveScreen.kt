@@ -2,6 +2,7 @@ import java.util.Scanner
 
 class ArchiveScreen(archive: Archive) : Screen<Note>() {
     override val list: MutableList<Note> = archive.notes
+
     private val notesMap = mutableMapOf<String, Note>()
     override fun create() {
         println("Придумайте название для заметки:")

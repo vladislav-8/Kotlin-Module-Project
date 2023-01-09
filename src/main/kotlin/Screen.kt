@@ -3,6 +3,7 @@ import java.util.*
 
 abstract class Screen<T> {
     abstract val list: MutableList<T>
+
     fun navigate() {
         printMenu(list)
         var input = Scanner(System.`in`).nextLine()
