@@ -1,5 +1,6 @@
 import java.util.*
 
+
 abstract class Screen<T> {
     abstract val list: MutableList<T>
     fun navigate() {
