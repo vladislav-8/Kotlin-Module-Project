@@ -1,6 +1,5 @@
 import java.util.*
 
-
 abstract class Screen<T> {
     abstract val list: MutableList<T>
     fun navigate() {
@@ -18,6 +17,7 @@ abstract class Screen<T> {
                         (param - 2) >= 0 && (param - 2) < list.size -> {
                             val element = list[(param - 2)]
                             show(element)
+                            exit()
                         }
                         else -> println("Такого пункта в меню нет. Повторим")
                     }
@@ -31,4 +31,11 @@ abstract class Screen<T> {
     abstract fun create()
     abstract fun show(param: T)
     abstract fun printMenu(list: MutableList<T>)
+
+    private fun exit() {
+        do {
+            println("Нажмите 0 для выхода.")
+            val pressExit = Scanner(System.`in`).nextLine()
+        } while (pressExit != "0")
+    }
 }
